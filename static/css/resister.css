@@ -1,0 +1,45 @@
+@media screen and (min-width){
+    .container {
+        width: 1280px;
+        /*margin: 0 10px;*/
+    }
+}
+
+
+.head{
+    background: #6678a2!important;
+}
+
+.headSet{
+    background: #6678a2!important;
+    border:0;
+    /*border-right: 1px;*/
+    margin-bottom: 0;
+}
+a.headTitleSet{
+    font-family:宋体, serif !important;
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffffff!important;
+}
+img.headImgSet{
+    padding-top: 15px;
+    /*padding-bottom: 0!important;*/
+    /*margin: 0;*/
+}
+
+.navLinkSet{
+    color: #ffffff!important;
+    font-size: 17px!important;
+    font-weight: bold;
+}
+
+.inner{
+    /*background-color: #0f0f0f!important;*/
+}
+
+.fromSet{
+    /*border-top: 2px solid #262626;*/
+    margin-top: 40%;
+    margin-bottom: 20%;
+}

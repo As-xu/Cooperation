@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/resister.css">
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <style>
+        .body{
+            width: 100%;
+            height: 815px;
+            /*background-color: #0f0f0f!important;*/
+            background-image: url("/static/img/coop11.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="head">
+    <div class="container ">
+        <nav class="navbar navbar-default headSet">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <img src="" alt="">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!--                        <img src="img/coop4.png" class="headImgSet" alt="" width="45px" height="30px">-->
+                    <a class="navbar-brand headTitleSet" href="/">大学生合作网</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a class="navLinkSet" href="/user/login">登录</a>
+                        </li>
+{#                        <li>#}
+{#                            <a class="navLinkSet" href="#">注册</a>#}
+{#                        </li>#}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+
+</div>
+    <div class="body">
+        <div class="container">
+            <div class="ro inner">
+                <div class="col-md-4">
+                    <form class="form-horizontal fromSet" method="post" action="/user/register_handle">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <label for="inputName" class="col-sm-3 control-label">昵称</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputName" name="Name" placeholder="请输入4~20个字符">
+                                <p></p>
+                            <p>
+                                {% if name == False %}
+                                    输入的昵称不合法
+                                {% endif %}
+                            </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone" class="col-sm-3 control-label">手机号</label>
+                            <div class="col-sm-9">
+                                <input type="tel" class="form-control" id="inputPhone" name="phone" placeholder="">
+                                                            <p></p>
+                            <p>
+                                {% if phone == False %}
+                                    输入的手机号不合法
+                                {% endif %}
+                            </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputage" class="col-sm-3 control-label">年龄</label>
+                            <div class="col-sm-9">
+                                <input type="number" class="form-control" id="inputage" name="age" placeholder="1" max="255", min="0">
+                                                        <p></p>
+                            <p>
+                                {% if age == False %}
+                                    输入的年龄不合法
+                                {% endif %}
+                            </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPassword" class="col-sm-3 control-label">密码</label>
+                            <div class="col-sm-9">
+                                <input type="password" class="form-control" id="inputPassword" name="pwd" placeholder="">
+                                                        <p></p>
+                            <p>
+                                {% if password == Fasle %}
+                                    输入的密码不合法
+                                {% endif %}
+                            </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputPhone" class="col-sm-3 control-label">性别 </label>
+                            &nbsp;&nbsp;<label class="radio-inline">
+                            <input type="radio" name="gender" id="inlineRadio1" value="1" checked>男
+                        </label>
+                            <label class="radio-inline">
+                                <input type="radio" name="gender" id="inlineRadio2" value="0"> 女
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputSchool" class="col-sm-3 control-label">学校</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputSchool" name="school" placeholder="" value="">
+                                                        <p></p>
+                            <p>
+                                {% if school == False %}
+                                    输入的学校名不合法
+                                {% endif %}
+                            </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputHobby" class="col-sm-3 control-label">爱好</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputHobby" name="hobby" value="" placeholder="">
+                                                        <p></p>
+                            <p>
+                                {% if hobby == False %}
+                                    输入的字段过大
+                                {% endif %}
+                            </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputQQ" class="col-sm-3 control-label">QQ号</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputQQ" name="qqNumber" placeholder="">
+                                                        <p></p>
+                            <p>
+                                {% if qqNum == False %}
+                                    输入的QQ号不合法
+                                {% endif %}
+                            </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputProfession" class="col-sm-3 control-label">专业</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="inputProfession" name="profession" placeholder="">
+                                                        <p></p>
+                            <p>
+                                {% if profession == False %}
+                                    输入的专业名不合法
+                                {% endif %}
+                            </p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-10">
+                                <button type="submit" class="btn btn-default">注册</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-8">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

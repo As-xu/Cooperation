@@ -1,0 +1,77 @@
+@media screen and (min-width){
+    .container {
+        width: 1280px;
+        /*margin: 0 10px;*/
+    }
+}
+
+.head{
+    background: #6678a2!important;
+}
+
+.headSet{
+    background: #6678a2!important;
+    border:0;
+    /*border-right: 1px;*/
+    margin-bottom: 0;
+}
+a.headTitleSet{
+    font-family:宋体, serif!important;
+    font-weight: bold;
+    font-size: 28px;
+    color: #ffffff!important;
+}
+img.headImgSet{
+    padding-top: 15px;
+    /*padding-bottom: 0!important;*/
+    /*margin: 0;*/
+}
+
+.navLinkSet{
+    color: #ffffff!important;
+    font-size: 17px!important;
+    font-weight: bold;
+}
+
+.body{
+    /*background: #F6F2B3;*/
+}
+
+#innerInfo{
+    /*padding-top: 4%;*/
+}
+
+.innerBody{
+    /*padding-top: 0;*/
+}
+
+.buttonSet{
+    float: right;
+}
+
+.innerContent{
+    display: block;
+    float: left;
+    font-size: 17px;
+    /*line-height: px;*/
+    /*margin-bottom: 0;*/
+    margin-top: 5px;
+    /*padding-top: 0;*/
+    margin-bottom: 0;
+}
+
+.formContent p{
+
+}
+
+.listColor{
+    background: #B3CDF6!important;
+}
+
+.listColor h4{
+    color: #000000!important;
+}
+
+.listColor p{
+    color: #606162!important;
+}

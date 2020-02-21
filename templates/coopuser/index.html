@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大学生合作网</title>
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    </head>
+<body>
+    <div class="head">
+    <div class="container">
+        <nav class="navbar navbar-default headSet">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <img src="" alt="">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand headTitleSet" href="">大学生合作网</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        {% if isLogin == True %}
+                            <li>
+                            <a class="navLinkSet" href="/user/userInfo">{{ username }}</a>
+                            </li>
+                            <li>
+                                <a class="navLinkSet" href="/user/logout">注销</a>
+                            </li>
+                        {% else %}
+                            <li>
+                                <a class="navLinkSet" href="/user/login">登录</a>
+                            </li>
+                            <li>
+                                <a class="navLinkSet" href="/user/register">注册</a>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+</div>
+    <div class="body">
+        <div class="container titleBodyOne">
+            <div class="ro">
+                <div class="col-md-6 title">
+                    <h1 class>为什么要别人合作 ?</h1>
+                    <!--<p>同舟共济扬帆起，乘风破浪万里航</p>-->
+                    <p>二人同心, 其力断金</p>
+                    <!--                        <p>合作</p>-->
+                    <p>与其一个人单打独斗, 不如两人携手共赢</p>
+                    <p>合作能让我们优势互补，获得自己与他人利益的双赢</p>
+<!--                    <p><a class="btn btn-primary btn-lg" href="#" role="button">寻求合作</a></p>-->
+                </div>
+                <div class="col-md-offset-8">
+                    <img src="/static/img/coop.png" alt="" height="400px" width="400px">
+                </div>
+            </div>
+        </div>
+        <div class="container titleBodyTwo">
+            <div class="ro">
+                <div class="col-md-4 ">
+                    <img src="/static/img/coop9.jpg" alt="" height="350px" width="800px">
+                </div>
+                <div class="col-md-offset-7 title">
+                    <h1 class>有想法,技术不够?</h1>
+                    <p>灵感来了, 不应该消失在脑海中, 而应该去积极去实现</p>
+                    <p>来这里合作, 找到你需要的伙伴, 实现你的美妙的想法</p>
+                    <p><a class="btn btn-primary btn-lg" href="/project" role="button">
+                        <span class="glyphicon glyphicon-chevron-right"></span> 去找伙伴</a></p>
+
+                </div>
+            </div>
+        </div>
+        <div class="container titleBodyLast">
+            <div class="ro">
+                <div class="col-md-6 title">
+                    <h1 class>有技术,没项目?</h1>
+                    <!--<p>同舟共济扬帆起，乘风破浪万里航</p>-->
+                    <!--                    <p>二人</p>-->
+                    <!--<p>合作</p>-->
+                    <p>来这里, 锻炼自己的技术, 拥有更多的项目经验</p>
+                    <p>同时, 来这里寻找机会, 成功也许就在眼前</p>
+                    <p>
+
+                        <a class="btn btn-primary btn-lg " href="cooperation" role="button">
+                            <span class="glyphicon glyphicon-chevron-right"></span> 去找找项目
+                        </a></p>
+                </div>
+                <div class="col-md-offset-8">
+                    <img src="/static/img/coop2.png" alt="" height="350px" width="350px">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
